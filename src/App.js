@@ -2,7 +2,6 @@ import './App.css';
 import axios from 'axios';
 import React, { useState } from 'react';
 
-
 function App() {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
@@ -34,29 +33,33 @@ function App() {
     }
 };
   return (
-    <body>
-    <div class="weather-search-container">
-        <h1>Weather Information</h1>
+    <><body>
+      <div class="weather-search-container">
+        <h1 className='heading-main'>Weather App</h1>
         <form id="weatherForm" onSubmit={handleSubmit}>
-            <input type="text" id="cityInput" value={city} onChange={handleChange} placeholder="Enter city name" />
-            <button type="submit">Search</button>
+          <input type="text" id="cityInput" value={city} onChange={handleChange} placeholder="Enter city name" />
+          <button type="submit">Search</button>
         </form>
         <div id="error" class="error"></div>
         <div id="weatherResult" class="weather-result"></div>
         <div className='messages'>
-        {error && <p className="error">{error}</p>}
-        {weatherData && (
+          {error && <p className="error">{error}</p>}
+          {weatherData && (
             <div className="weather-result">
-                <h2>{weatherData.name}</h2>
-                <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(1)} °C</p>
-                <p>Weather: {weatherData.weather[0].description}</p>
-                <p>Country: {weatherData.sys.country}</p>
+              <h2>{weatherData.name}</h2>
+              <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(1)} °C</p>
+              <p>Weather: {weatherData.weather[0].description}</p>
+              <p>Country: {weatherData.sys.country}</p>
             </div>
-        )}
+          )}
+        </div>
+      </div>
+    </body>
+    <div className='jaison'>
+      <a target='_blank' href='https://www.linkedin.com/in/jaison-jaideep-lobo/'>Developed By ~ Jaison</a>
     </div>
-    </div>
+    </>
     
-</body>
 
   );
 }
