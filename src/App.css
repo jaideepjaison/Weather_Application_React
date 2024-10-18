@@ -54,6 +54,7 @@ body {
   height: auto;
   max-width: 500px; /* Set a maximum width for larger screens */
   backdrop-filter: blur(10px);
+  outline: 1px solid #fff;
 }
   
 
