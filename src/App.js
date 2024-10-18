@@ -56,7 +56,7 @@ function App() {
       </div>
     </body>
     <div className='jaison'>
-      <a target='_blank' href='https://www.linkedin.com/in/jaison-jaideep-lobo/'>Developed By ~ Jaison</a>
+      <a target='_blank' href='https://www.linkedin.com/in/jaison-jaideep-lobo/'>Developed By ~ Jaison Lobo</a>
     </div>
     </>
     
