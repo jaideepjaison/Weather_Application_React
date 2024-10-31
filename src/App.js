@@ -26,7 +26,7 @@ function App() {
     } catch (err) {
       if(city=='')
       {
-        setError('Please Enter the City');
+        setError('Please Enter the City!!!');
       }else{
         setError('City not found');
       }
